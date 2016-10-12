@@ -16,6 +16,11 @@ public class StringCalculatorTest {
 		assertThat(add("1")).isEqualTo(1);
 	}
 
+	@Test
+	public void returnsTenWhenPassingAStringOfTen() {
+		assertThat(add("10")).isEqualTo(10);
+	}
+
 	private int add(String numbers) {
 		if (isEmpty(numbers)) {
 			return 0;
