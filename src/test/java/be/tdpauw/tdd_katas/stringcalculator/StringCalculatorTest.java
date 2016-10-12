@@ -1,39 +1,31 @@
 package be.tdpauw.tdd_katas.stringcalculator;
 
-import static be.tdpauw.tdd_katas.utils.Strings.isEmpty;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-import be.tdpauw.tdd_katas.utils.Strings;
-
 public class StringCalculatorTest {
+
+	private final StringCalculator stringCalculator = new StringCalculator();
 
 	@Test
 	public void returnsZeroWhenPassingAnEmptyString() {
-		assertThat(add("")).isEqualTo(0);
+		assertThat(stringCalculator.add("")).isEqualTo(0);
 	}
 
 	@Test
 	public void returnsOneWhenPassingAStringWithOne() {
-		assertThat(add("1")).isEqualTo(1);
+		assertThat(stringCalculator.add("1")).isEqualTo(1);
 	}
 
 	@Test
 	public void returnsTenWhenPassingAStringWithTen() {
-		assertThat(add("10")).isEqualTo(10);
+		assertThat(stringCalculator.add("10")).isEqualTo(10);
 	}
 
 	@Test
 	public void returnsMinusOneWhenPassingAStringWithMinusOne() {
-		assertThat(add("-1")).isEqualTo(-1);
-	}
-
-	public static int add(String numbers) {
-		if (isEmpty(numbers)) {
-			return 0;
-		}
-		return Integer.valueOf(numbers);
+		assertThat(stringCalculator.add("-1")).isEqualTo(-1);
 	}
 
 }
