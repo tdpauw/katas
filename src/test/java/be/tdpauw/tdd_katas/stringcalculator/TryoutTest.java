@@ -13,4 +13,9 @@ public class TryoutTest {
 		String[] numbers = new String[0];
 		assertThat(Arrays.stream(numbers).mapToInt(Integer::valueOf).sum()).isEqualTo(0);
 	}
+
+	@Test
+	public void splitOfEmptyStringReturnsAnArrayWithEmptyString() {
+		assertThat("".split(",")).containsExactly("");
+	}
 }
