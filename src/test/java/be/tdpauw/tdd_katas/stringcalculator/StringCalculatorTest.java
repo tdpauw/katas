@@ -11,7 +11,15 @@ public class StringCalculatorTest {
 		assertThat(add("")).isEqualTo(0);
 	}
 
+	@Test
+	public void returns1WhenInputIs1() {
+		assertThat(add("1")).isEqualTo(1);
+	}
+
 	private int add(String numbers) {
-		return 0;
+		if ("".equals(numbers)) {
+			return 0;
+		}
+		return Integer.valueOf(numbers);
 	}
 }
