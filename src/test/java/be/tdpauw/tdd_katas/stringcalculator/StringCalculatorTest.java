@@ -17,9 +17,13 @@ public class StringCalculatorTest {
 	}
 
 	private int add(String numbers) {
-		if ("".equals(numbers)) {
+		if (isEmpty(numbers)) {
 			return 0;
 		}
 		return Integer.valueOf(numbers);
+	}
+
+	private boolean isEmpty(String numbers) {
+		return "".equals(numbers);
 	}
 }
