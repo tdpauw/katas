@@ -7,17 +7,17 @@ import org.junit.Test;
 public class StringCalculatorTest {
 
 	@Test
-	public void returnsZeroWhenEmptyString() {
+	public void returnsZeroWhenPassingAnEmptyString() {
 		assertThat(add("")).isEqualTo(0);
 	}
 
 	@Test
-	public void returnsOneWhenInputIsOne() {
+	public void returnsOneWhenPassingAStringWithOne() {
 		assertThat(add("1")).isEqualTo(1);
 	}
 
 	@Test
-	public void returnsTenWhenPassingAStringOfTen() {
+	public void returnsTenWhenPassingAStringWithTen() {
 		assertThat(add("10")).isEqualTo(10);
 	}
 
