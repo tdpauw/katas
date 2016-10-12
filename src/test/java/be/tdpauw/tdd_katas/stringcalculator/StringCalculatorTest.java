@@ -6,26 +6,31 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 
-	private final StringCalculator stringCalculator = new StringCalculator();
+	private final StringCalculator sut = new StringCalculator();
 
 	@Test
 	public void returnsZeroWhenPassingAnEmptyString() {
-		assertThat(stringCalculator.add("")).isEqualTo(0);
+		assertThat(sut.add("")).isEqualTo(0);
 	}
 
 	@Test
 	public void returnsOneWhenPassingAStringWithOne() {
-		assertThat(stringCalculator.add("1")).isEqualTo(1);
+		assertThat(sut.add("1")).isEqualTo(1);
 	}
 
 	@Test
 	public void returnsTenWhenPassingAStringWithTen() {
-		assertThat(stringCalculator.add("10")).isEqualTo(10);
+		assertThat(sut.add("10")).isEqualTo(10);
 	}
 
 	@Test
 	public void returnsMinusOneWhenPassingAStringWithMinusOne() {
-		assertThat(stringCalculator.add("-1")).isEqualTo(-1);
+		assertThat(sut.add("-1")).isEqualTo(-1);
+	}
+
+	@Test
+	public void returnsThreeWhenPassingAstringWithOneAndTwo() {
+		assertThat(sut.add("1,2")).isEqualTo(3);
 	}
 
 }
