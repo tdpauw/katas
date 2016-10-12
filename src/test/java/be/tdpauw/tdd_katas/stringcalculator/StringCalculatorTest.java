@@ -21,6 +21,11 @@ public class StringCalculatorTest {
 		assertThat(add("10")).isEqualTo(10);
 	}
 
+	@Test
+	public void returnsMinusOneWhenPassingAStringWithMinusOne() {
+		assertThat(add("-1")).isEqualTo(-1);
+	}
+
 	private int add(String numbers) {
 		if (isEmpty(numbers)) {
 			return 0;
