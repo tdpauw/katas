@@ -12,7 +12,7 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void returns1WhenInputIs1() {
+	public void returnsOneWhenInputIsOne() {
 		assertThat(add("1")).isEqualTo(1);
 	}
 
