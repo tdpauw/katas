@@ -14,10 +14,8 @@ public class StringCalculator {
 		}
 
 		String[] numbers = input.split(",");
-		int result = 0;
-		for(String number: numbers) {
-			result += Integer.parseInt(number);
-		}
+
+		int result = Arrays.stream(numbers).mapToInt(Integer::parseInt).sum();
 		return result;
 	}
 }
