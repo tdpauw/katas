@@ -48,4 +48,9 @@ public class StringCalculatorTest {
 	public void returnsTenForOneTwoThreeAndFour() {
 		assertThat(sut.add("1,2,3,4")).isEqualTo(10);
 	}
+
+	@Test
+	public void returnsFifteenForOneTwoThreeFourAndFive() {
+		assertThat(sut.add("1,2,3,4,5")).isEqualTo(15);
+	}
 }
