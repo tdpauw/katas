@@ -38,6 +38,17 @@ public class StringCalculatorTest {
 	}
 
 	@Test
+	public void throwsExceptionOnOneAndMinusOne() {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> sut.add("1,-1"));
+	}
+
+
+	@Test
+	public void throwsExceptionOnMinusOneTwoAndMinusThree() {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> sut.add("-1,2,-3"));
+	}
+
+	@Test
 	public void returnsThreeForOneAndTwo() {
 		assertThat(sut.add("1,2")).isEqualTo(3);
 	}
