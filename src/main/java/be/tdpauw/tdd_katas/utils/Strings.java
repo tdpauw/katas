@@ -21,13 +21,6 @@ public class Strings {
 	}
 
 	public static boolean isEmptyOrNull(String input) {
-		if (input == null) {
-			return true;
-		}
-
-		if (isEmpty(input)) {
-			return true;
-		}
-		return false;
+		return (input == null) || isEmpty(input);
 	}
 }
