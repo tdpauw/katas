@@ -15,32 +15,32 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void returnsZeroWhenPassingAnEmptyString() {
+	public void returnsZeroForAnEmptyString() {
 		assertThat(sut.add("")).isEqualTo(0);
 	}
 
 	@Test
-	public void returnsOneWhenPassingAStringWithOne() {
+	public void returnsOneForOne() {
 		assertThat(sut.add("1")).isEqualTo(1);
 	}
 
 	@Test
-	public void returnsTenWhenPassingAStringWithTen() {
+	public void returnsTenForTen() {
 		assertThat(sut.add("10")).isEqualTo(10);
 	}
 
 	@Test
-	public void returnsMinusOneWhenPassingAStringWithMinusOne() {
+	public void returnsMinusOneForMinusOne() {
 		assertThat(sut.add("-1")).isEqualTo(-1);
 	}
 
 	@Test
-	public void returnsThreeWhenPassingAstringWithOneAndTwo() {
+	public void returnsThreeForOneAndTwo() {
 		assertThat(sut.add("1,2")).isEqualTo(3);
 	}
 
 	@Test
-	public void returnsSixWhenPassingAStringWithOneTwoAndThree() {
+	public void returnsSixForOneTwoAndThree() {
 		assertThat(sut.add("1,2,3")).isEqualTo(6);
 	}
 
