@@ -1,5 +1,6 @@
 package be.tdpauw.tdd_katas.stringcalculator;
 
+import static be.tdpauw.tdd_katas.utils.Strings.EMPTY;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
@@ -10,7 +11,7 @@ public class StringsTest {
 
 	@Test
 	public void splitOfEmptyStringReturnsAnEmptyArray() {
-		assertThat(Strings.split("")).hasSize(0);
+		assertThat(Strings.split(EMPTY)).hasSize(0);
 	}
 
 	@Test
@@ -25,6 +26,6 @@ public class StringsTest {
 
 	@Test
 	public void isEmptyOrNullReturnsTrueForEmptyString() {
-		assertThat(Strings.isEmptyOrNull("")).isTrue();
+		assertThat(Strings.isEmptyOrNull(EMPTY)).isTrue();
 	}
 }

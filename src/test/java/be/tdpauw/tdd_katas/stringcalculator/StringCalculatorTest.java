@@ -1,7 +1,7 @@
 package be.tdpauw.tdd_katas.stringcalculator;
 
+import static be.tdpauw.tdd_katas.utils.Strings.EMPTY;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ public class StringCalculatorTest {
 
 	@Test
 	public void returnsZeroForAnEmptyString() {
-		assertThat(sut.add("")).isEqualTo(0);
+		assertThat(sut.add(EMPTY)).isEqualTo(0);
 	}
 
 	@Test
