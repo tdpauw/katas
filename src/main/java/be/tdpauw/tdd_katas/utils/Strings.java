@@ -11,6 +11,10 @@ public class Strings {
 	}
 
 	public static String[] split(String input) {
+		if (input == null) {
+			return new String[0];
+		}
+
 		if (isEmpty(input)) {
 			return new String[0];
 		}

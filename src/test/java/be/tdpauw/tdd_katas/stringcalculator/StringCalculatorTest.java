@@ -10,13 +10,13 @@ public class StringCalculatorTest {
 	private final StringCalculator sut = new StringCalculator();
 
 	@Test
-	public void throwsExceptionOnNullInput() {
-		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> sut.add(null));
+	public void returnsZeroForAnEmptyString() {
+		assertThat(sut.add("")).isEqualTo(0);
 	}
 
 	@Test
-	public void returnsZeroForAnEmptyString() {
-		assertThat(sut.add("")).isEqualTo(0);
+	public void returnsZeroForNullString() {
+		assertThat(sut.add(null)).isEqualTo(0);
 	}
 
 	@Test
