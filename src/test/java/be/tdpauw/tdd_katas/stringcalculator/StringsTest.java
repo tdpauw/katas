@@ -12,4 +12,9 @@ public class StringsTest {
 	public void splitOfEmptyStringReturnsAnEmptyArray() {
 		assertThat(Strings.split("")).hasSize(0);
 	}
+
+	@Test
+	public void splitOnNewlineDelimiter() {
+		assertThat(Strings.split("1\n2")).containsExactly("1","2");
+	}
 }

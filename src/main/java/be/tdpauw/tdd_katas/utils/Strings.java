@@ -14,6 +14,6 @@ public class Strings {
 		if (isEmpty(input)) {
 			return new String[0];
 		}
-		return input.split(",");
+		return input.split("[,|\n]");
 	}
 }
