@@ -58,4 +58,9 @@ public class StringCalculatorTest {
 	public void supportsNewlineDelimiter() {
 		assertThat(sut.add("1\n2")).isEqualTo(3);
 	}
+
+	@Test
+	public void supportsBothDelimiters() {
+		assertThat(sut.add("1\n2,3")).isEqualTo(6);
+	}
 }
