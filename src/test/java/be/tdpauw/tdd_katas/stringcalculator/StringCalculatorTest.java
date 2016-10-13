@@ -2,8 +2,11 @@ package be.tdpauw.tdd_katas.stringcalculator;
 
 import static be.tdpauw.tdd_katas.utils.Strings.EMPTY;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import org.junit.Test;
+
+import com.sun.javaws.exceptions.InvalidArgumentException;
 
 public class StringCalculatorTest {
 
@@ -30,8 +33,8 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void returnsMinusOneForMinusOne() {
-		assertThat(sut.add("-1")).isEqualTo(-1);
+	public void throwsExceptionOnNegativeNumber() {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> sut.add("-1"));
 	}
 
 	@Test
