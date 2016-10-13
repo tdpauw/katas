@@ -11,13 +11,21 @@ public class Strings {
 	}
 
 	public static String[] split(String input) {
-		if (input == null) {
+		if (isEmptyOrNull(input)) {
 			return new String[0];
 		}
 
-		if (isEmpty(input)) {
-			return new String[0];
-		}
 		return input.split("[,|\n]");
+	}
+
+	public static boolean isEmptyOrNull(String input) {
+		if (input == null) {
+			return true;
+		}
+
+		if (isEmpty(input)) {
+			return true;
+		}
+		return false;
 	}
 }

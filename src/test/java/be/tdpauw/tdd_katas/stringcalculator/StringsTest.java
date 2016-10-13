@@ -17,4 +17,14 @@ public class StringsTest {
 	public void splitOnNewlineDelimiter() {
 		assertThat(Strings.split("1\n2")).containsExactly("1","2");
 	}
+
+	@Test
+	public void isEmptyOrNullReturnsTrueForNull() {
+		assertThat(Strings.isEmptyOrNull(null)).isTrue();
+	}
+
+	@Test
+	public void isEmptyOrNullReturnsTrueForEmptyString() {
+		assertThat(Strings.isEmptyOrNull("")).isTrue();
+	}
 }
