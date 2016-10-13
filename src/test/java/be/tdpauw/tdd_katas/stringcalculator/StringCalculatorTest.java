@@ -43,4 +43,9 @@ public class StringCalculatorTest {
 	public void returnsSixWhenPassingAStringWithOneTwoAndThree() {
 		assertThat(sut.add("1,2,3")).isEqualTo(6);
 	}
+
+	@Test
+	public void returnsTenForOneTwoThreeAndFour() {
+		assertThat(sut.add("1,2,3,4")).isEqualTo(10);
+	}
 }
