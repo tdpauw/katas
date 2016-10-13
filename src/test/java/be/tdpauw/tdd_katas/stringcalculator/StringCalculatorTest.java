@@ -1,12 +1,18 @@
 package be.tdpauw.tdd_katas.stringcalculator;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import org.junit.Test;
 
 public class StringCalculatorTest {
 
 	private final StringCalculator sut = new StringCalculator();
+
+	@Test
+	public void throwsExceptionOnNullInput() {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> sut.add(null));
+	}
 
 	@Test
 	public void returnsZeroWhenPassingAnEmptyString() {
@@ -33,4 +39,8 @@ public class StringCalculatorTest {
 		assertThat(sut.add("1,2")).isEqualTo(3);
 	}
 
+	@Test
+	public void returnsSixWhenPassingAStringWithOneTwoAndThree() {
+		assertThat(sut.add("1,2,3")).isEqualTo(6);
+	}
 }
