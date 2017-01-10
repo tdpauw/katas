@@ -77,4 +77,9 @@ public class StringCalculatorTest {
 	public void supportsBothDelimiters() {
 		assertThat(sut.add("1\n2,3")).isEqualTo(6);
 	}
+
+	@Test
+	public void throwsExceptionOnInvalidDelimiter() {
+		assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> sut.add("1,\n"));
+	}
 }
