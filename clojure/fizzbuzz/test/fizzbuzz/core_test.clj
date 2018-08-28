@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [fizzbuzz.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest one-returns-one
+  (testing "one returns one"
+    (is (= 1 1))))
