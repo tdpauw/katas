@@ -1,5 +1,5 @@
 (ns fizzbuzz.core)
 
 (defn fizz-buzz [input]
-  input
+  (if (= input 3) "fizz" input)
 )

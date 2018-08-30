@@ -11,3 +11,9 @@
     (is (= (fizz-buzz 2) 2))
   )
 )
+
+(deftest three-returns-fizz
+  (testing "three returns fizz"
+    (is (= (fizz-buzz 3) "fizz"))
+  )
+)
