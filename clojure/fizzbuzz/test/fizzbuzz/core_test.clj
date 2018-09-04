@@ -17,3 +17,9 @@
     (is (= (fizz-buzz 3) "fizz"))
   )
 )
+
+(deftest five-returns-buzz
+  (testing "five returns buzz"
+    (is (= (fizz-buzz 5) "buzz"))
+  )
+)
