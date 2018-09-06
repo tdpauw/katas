@@ -9,7 +9,7 @@
 )
 
 (defn divisible-by-five [input]
-  (zero? (mod input 5))
+  (divisible-by input 5)
 )
 
 (defn fizz-buzz [input]
