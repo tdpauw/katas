@@ -29,3 +29,9 @@
     (is (= (fizz-buzz 12) "fizz"))
   )
 )
+
+(deftest divisible-by-five-returns-buzz
+  (testing "divisible by five returns buzz"
+    (is (= (fizz-buzz 20) "buzz"))
+  )
+)

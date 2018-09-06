@@ -8,5 +8,6 @@
   (cond
      (= input 5) "buzz"
      (divisible-by-three input) "fizz"
+     (zero? (mod input 5)) "buzz"
      :else input)
 )
