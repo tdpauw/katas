@@ -4,5 +4,6 @@
   (cond
      (= input 3) "fizz"
      (= input 5) "buzz"
+     (zero? (mod input 3)) "fizz"
      :else input)
 )

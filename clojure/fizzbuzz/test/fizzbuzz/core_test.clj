@@ -23,3 +23,9 @@
     (is (= (fizz-buzz 5) "buzz"))
   )
 )
+
+(deftest divisible-by-three-returns-fizz
+  (testing "divisible by three returns fizz"
+    (is (= (fizz-buzz 12) "fizz"))
+  )
+)
