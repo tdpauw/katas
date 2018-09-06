@@ -1,7 +1,11 @@
 (ns fizzbuzz.core)
 
+(defn divisible-by [dividend divisor]
+  (zero? (mod dividend divisor))
+)
+
 (defn divisible-by-three [input]
-  (zero? (mod input 3))
+  (divisible-by input 3)
 )
 
 (defn divisible-by-five [input]
