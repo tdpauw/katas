@@ -14,6 +14,7 @@
 
 (defn fizz-buzz [input]
   (cond
+     (and (divisible-by-three input) (divisible-by-five input)) "fizzbuzz"
      (divisible-by-three input) "fizz"
      (divisible-by-five input) "buzz"
      :else input)

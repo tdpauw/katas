@@ -35,3 +35,11 @@
     (is (= (fizz-buzz 20) "buzz"))
   )
 )
+
+(deftest fifteen-returns-fizzbuzz
+  (testing "fifteen returns fizzbuzz"
+    (is (= (fizz-buzz 15) "fizzbuzz"))
+  )
+)
+
+
