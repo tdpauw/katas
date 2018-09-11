@@ -23,3 +23,9 @@
 (defn fizz-buzz-one-to-hundred []
   (map fizz-buzz (range 1 101))
 )
+
+(defn -main []
+  (doseq [item (fizz-buzz-one-to-hundred)]
+    (println item)
+  )
+)
