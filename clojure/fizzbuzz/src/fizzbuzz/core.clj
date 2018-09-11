@@ -19,3 +19,7 @@
      (divisible-by-five input) "buzz"
      :else input)
 )
+
+(defn fizz-buzz-one-to-hundred []
+  (map fizz-buzz (range 1 101))
+)
