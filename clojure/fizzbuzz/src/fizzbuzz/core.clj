@@ -4,19 +4,11 @@
   (zero? (mod dividend divisor))
 )
 
-(defn divisible-by-three [input]
-  (divisible-by input 3)
-)
-
-(defn divisible-by-five [input]
-  (divisible-by input 5)
-)
-
 (defn fizz-buzz [input]
   (cond
-     (and (divisible-by-three input) (divisible-by-five input)) "fizzbuzz"
-     (divisible-by-three input) "fizz"
-     (divisible-by-five input) "buzz"
+     (and (divisible-by input 3) (divisible-by input 5)) "fizzbuzz"
+     (divisible-by input 3) "fizz"
+     (divisible-by input 5) "buzz"
      :else input)
 )
 
